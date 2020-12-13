@@ -7,6 +7,19 @@ events:
           script:
             # Try to create a docroot directory which Acquia Cloud expects to serve from. If the docroot directory already existis you will get an error in your log.
             - echo "Testing Overflowing Container"
-            - time sh -c 'dd if=/dev/zero iflag=count_bytes count=10G bs=1M of=large; sync'
-            - du -B 1 --apparent-size large
-            
+            - echo " --- Ubuntu --- "
+            - wget http://releases.ubuntu.com/20.04/ubuntu-20.04.1-desktop-amd64.iso
+            - echo " --- Kubuntu --- "
+            - wget http://cdimage.ubuntu.com/kubuntu/releases/20.04/release/kubuntu-20.04.1-desktop-amd64.iso
+            - echo " --- Lubuntu --- "
+            - wget http://cdimage.ubuntu.com/xubuntu/releases/20.04/release/xubuntu-20.04.1-desktop-amd64.iso
+            - echo " --- Xbuntu --- "
+            - wget http://cdimage.ubuntu.com/xubuntu/releases/20.04/release/xubuntu-20.04.1-desktop-amd64.iso
+            - echo " --- Budgie --- "
+            - wget http://cdimage.ubuntu.com/ubuntu-budgie/releases/20.04/release/ubuntu-budgie-20.04.1-desktop-amd64.iso
+            - echo " --- Mate --- "
+            - wget http://cdimage.ubuntu.com/ubuntu-mate/releases/20.04/release/ubuntu-mate-20.04.1-desktop-amd64.iso
+            - echo " --- Studio --- "
+            - wget http://cdimage.ubuntu.com/ubuntustudio/releases/20.04/release/ubuntustudio-20.04.1-dvd-amd64.iso
+
+
